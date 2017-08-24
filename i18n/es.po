@@ -1,0 +1,23 @@
+#: init/msbuild.js
+msgid "CI Server not found"
+msgstr "Servidor CI no encontrado"
+
+#: init/msbuild.js
+msgid "Command MSBuild: "
+msgstr "Commando MSBuild: "
+
+#: public/form/msbuild-form.js
+msgid "Server"
+msgstr "Servidor"
+
+#: public/form/msbuild-form.js
+msgid "MSBuild Path"
+msgstr "Ruta MSBuild"
+
+#: public/form/msbuild-form.js
+msgid "Project Path"
+msgstr "Ruta Proyecto"
+
+#: public/form/msbuild-form.js
+msgid "Switches"
+msgstr "Opciones"
