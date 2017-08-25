@@ -28,8 +28,8 @@ The main fields are:
 Configuration example:
 
     Server CI: GenericServer
-    MSBuild Path: "c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe"
-    Project Path: "c:\BuildApp\BuildApp.csproj"
+    MSBuild Path: c:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe
+    Project Path: c:\BuildApp\BuildApp.csproj
     Switches: /t:mytarget
 
 - **Errors and output** - These two fields concern management of control errors. Their options are:
