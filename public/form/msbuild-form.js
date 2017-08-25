@@ -25,10 +25,12 @@
         allowBlank: false,
     });
 
-    var switches = Cla.ui.textField({
+    var switches = Cla.ui.arrayGrid({
         name: 'switches',
         fieldLabel: _('Switches'),
-        value: data.switches || ''
+        value: data.switches,
+        description: _('Switches'),
+        default_value: '.'
     });
 
     var errors = Cla.ui.errorManagementBox({

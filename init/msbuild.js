@@ -12,7 +12,7 @@ reg.register('service.msbuild.script', {
         var command = '';
         var msbuild = params.msbuild || '';
         var project = params.project || '';
-        var switches = params.switches || '';
+        var switches = params.switches;
         var ciServer = ci.findOne({
             mid: msbuildServer + ''
         });
@@ -20,7 +20,7 @@ reg.register('service.msbuild.script', {
             log.error(_("CI Server not found"));
             throw new Error(_('CI Server not found'));
         }
-        command = '"' + msbuild + '"' + ' ' + '"' + project + '"' + ' ' + switches;
+        command = '"' + msbuild + '"' + ' ' + '"' + project + '"' + ' ' + switches.join(" ");
 
         log.debug(_("Command MSBuild: ") + command);
 
