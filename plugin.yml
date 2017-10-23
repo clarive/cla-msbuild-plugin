@@ -1,7 +1,7 @@
 name: Clarive MSBuild Plugin
 description: The MSBuild plugin will allow you to build applications via the command-line (CLI).
 version: 1.0
-icon: https://github.com/clarive/cla-msbuild-plugin/public/icon/msbuild.svg
+icon: https://cdn.rawgit.com/clarive/cla-msbuild-plugin/master/public/icon/msbuild.svg?sanitize=true
 url: https://github.com/clarive/cla-msbuild-plugin
 requires:
   - clarive_version: 6.8 <= version
