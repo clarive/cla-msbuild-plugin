@@ -4,6 +4,24 @@ reg.register('service.msbuild.script', {
     name: 'MSBuild',
     icon: '/plugin/cla-msbuild-plugin/icon/msbuild.svg',
     form: '/plugin/cla-msbuild-plugin/form/msbuild-form.js',
+    rulebook: {
+        moniker: 'msbuild_task',
+        description: _('Executes MS Build commands'),
+        required: [ 'server', 'msbuild', 'project', 'switches'],
+        allow: ['server', 'user', 'msbuild', 'project', 'switches', 'errors'],
+        mapper: {
+            'errors':'type'
+        },
+        examples: [{
+            msbuild_task: {
+                server: 'msbuild_server',
+                user: 'clarive_user',
+                msbuild: 'c:\\Program Files (x86)\\MSBuilt_Path\\MSBuild.exe',
+                project: "c:\\BuildApp\\BuildApp.csproj",
+                switches: ['/t:mytarget']
+            }
+        }]
+    },
     handler: function(ctx, params) {
         var ci = require("cla/ci");
         var log = require('cla/log');
@@ -12,7 +30,8 @@ reg.register('service.msbuild.script', {
         var command = '';
         var msbuild = params.msbuild || '';
         var project = params.project || '';
-        var switches = params.switches;
+        var switches = params.switches || [];
+        var user = params.user || ""
         var ciServer = ci.findOne({
             mid: msbuildServer + ''
         });
@@ -42,6 +61,6 @@ reg.register('service.msbuild.script', {
                 rc_warn: params.warn
             }
         });
-        return output;
+        return output.output;
     }
 });
