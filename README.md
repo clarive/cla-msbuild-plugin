@@ -1,6 +1,6 @@
 # MSBuild Plugin
 
-<img src="https://cdn.rawgit.com/clarive/cla-msbuild-plugin/master/public/icon/msbuild.svg?sanitize=true" alt="MSBuild Plugin" title="MSBuild Plugin" width="120" height="120">
+<img src="https://cdn.jsdelivr.net/gh/clarive/cla-msbuild-plugin/public/icon/msbuild.svg?sanitize=true" alt="MSBuild Plugin" title="MSBuild Plugin" width="120" height="120">
 
 The MSBuild plugin will allow you to build applications via the command-line (CLI).
 
